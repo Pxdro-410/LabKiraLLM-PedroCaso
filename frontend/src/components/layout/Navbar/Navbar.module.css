@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: var(--z-sticky);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--spacing-6);
+  background-color: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-primary-600);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.brandName {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-50);
+  letter-spacing: -0.01em;
+}
+
+.brandAccent {
+  color: var(--color-accent-400);
+}
+
+/* ── Cart button ── */
+.cartBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-700);
+  border: 1px solid var(--color-primary-600);
+  color: var(--color-neutral-200);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+  cursor: pointer;
+}
+
+.cartBtn:hover {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-accent-500);
+  color: var(--color-neutral-50);
+}
+
+.cartIcon {
+  font-size: 1.1rem;
+}
+
+.badgeWrapper {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+@media (max-width: 480px) {
+  .cartLabel {
+    display: none;
+  }
+}

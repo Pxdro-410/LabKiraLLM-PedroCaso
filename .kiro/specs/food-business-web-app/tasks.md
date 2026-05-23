@@ -124,7 +124,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
   - Crear `frontend/src/components/ui/EmptyState/EmptyState.jsx` y `EmptyState.module.css` para estados vacíos con mensaje configurable
   - _Requerimientos: 2.6, 3.4, 5.4, 5.5_
 
-- [~] 11. Implementar componente ParticleBackground
+- [x] 11. Implementar componente ParticleBackground
   - Crear `frontend/src/components/ParticleBackground/ParticleBackground.module.css` con `.canvas` posicionado `fixed`, `width: 100%`, `height: 100%`, `z-index: 0`, `background: var(--color-primary-900)`
   - Crear `frontend/src/components/ParticleBackground/ParticleBackground.jsx` implementando:
     - `createParticle(canvasWidth, canvasHeight, baseSpeed)` que genera partícula con posición aleatoria, velocidad angular aleatoria, `originalVx`/`originalVy`, radio y opacidad
@@ -147,12 +147,12 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que el producto punto entre el vector cursor→partícula y el delta de velocidad aplicado es positivo (dirección opuesta al cursor)
     - **Valida: Requerimiento 4.5**
 
-- [~] 12. Implementar componentes de layout (Navbar y Footer)
+- [x] 12. Implementar componentes de layout (Navbar y Footer)
   - Crear `frontend/src/components/layout/Navbar/Navbar.jsx` y `Navbar.module.css` con logo del negocio, navegación principal y Badge con `totalItems` del carrito visible en todo momento
   - Crear `frontend/src/components/layout/Footer/Footer.jsx` y `Footer.module.css` con información básica del negocio
   - _Requerimientos: 2.4, 5.1, 5.2_
 
-- [~] 13. Implementar feature de menú
+- [x] 13. Implementar feature de menú
   - Crear `frontend/src/features/menu/services/menuService.js` con funciones `getCategories()` y `getProducts(categoryId?)` que usan la instancia de Axios de `api.js`
   - Crear `frontend/src/features/menu/hooks/useMenu.js` usando `useAsync` para cargar categorías y productos, con estado de filtro por categoría activa
   - Crear `frontend/src/features/menu/components/CategoryFilter.jsx` y CSS Module con botones de filtro por categoría; al seleccionar una categoría debe filtrar los productos mostrados
@@ -168,7 +168,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que el resultado contiene únicamente productos con `category_id` igual a la categoría seleccionada
     - **Valida: Requerimiento 1.2**
 
-- [~] 14. Implementar feature de carrito de compras
+- [ ] 14. Implementar feature de carrito de compras
   - Crear `frontend/src/features/cart/context/CartContext.jsx` con `CartProvider` usando `useReducer` para gestionar el estado del carrito; el reducer debe manejar acciones: `ADD_ITEM` (agrega con cantidad 1 o incrementa), `REMOVE_ITEM`, `UPDATE_QUANTITY` (si qty=0, elimina el ítem), `CLEAR_CART`
   - Calcular `totalItems` (suma de cantidades) y `subtotal` (suma de `price × quantity`) como valores derivados del estado
   - Crear `frontend/src/features/cart/hooks/useCart.js` que consume `CartContext`
