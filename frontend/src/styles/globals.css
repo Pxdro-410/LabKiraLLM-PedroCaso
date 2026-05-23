@@ -1,0 +1,98 @@
+@import './reset.css';
+@import './tokens.css';
+
+/* ─── Base ───────────────────────────────────────────────── */
+html,
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-900);
+  min-height: 100vh;
+}
+
+/* ─── Typography scale ───────────────────────────────────── */
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-neutral-300);
+}
+
+/* ─── Focus visible ──────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent-400);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-600);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-500);
+}
+
+/* ─── Selection ──────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-accent-500);
+  color: var(--color-white);
+}
+
+/* ─── Layout helpers ─────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-6);
+}
+
+/* ─── Utility: visually hidden (accessibility) ───────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

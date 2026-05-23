@@ -92,7 +92,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
   - Crear la estructura de directorios completa del frontend según el diseño: `src/components/ui/`, `src/components/layout/`, `src/components/ParticleBackground/`, `src/features/menu/`, `src/features/cart/`, `src/features/orders/`, `src/hooks/`, `src/services/`, `src/styles/`, `src/utils/`
   - _Requerimientos: 5.1, 5.2, 5.3_
 
-- [ ] 8. Implementar tokens de diseño y estilos globales
+- [x] 8. Implementar tokens de diseño y estilos globales
   - Crear `frontend/src/styles/reset.css` con reset CSS moderno
   - Crear `frontend/src/styles/tokens.css` con todas las CSS custom properties del diseño (colores, tipografía, espaciado, bordes, sombras, transiciones)
   - Crear `frontend/src/styles/globals.css` importando reset y tokens, definiendo estilos base para `body`, `html`, tipografía y scrollbar
@@ -104,7 +104,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Usar fast-check para verificar que todos los pares (texto, fondo) de los tokens tienen ratio ≥ 4.5:1
     - **Valida: Requerimiento 5.6**
 
-- [~] 9. Implementar utilidades y configuración HTTP
+- [x] 9. Implementar utilidades y configuración HTTP
   - Crear `frontend/src/utils/formatCurrency.js` con la función `formatCurrency(price, locale, currency)` que retorna precio con exactamente dos decimales y símbolo de moneda
   - Crear `frontend/src/services/api.js` con instancia de Axios configurada con `baseURL`, interceptor de respuesta que normaliza errores al formato `{data, error, status}`, y manejo de errores de red
   - Crear `frontend/src/hooks/useAsync.js` con hook genérico para operaciones asíncronas (estado: `loading`, `data`, `error`)
@@ -116,7 +116,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que `formatCurrency` retorna siempre exactamente dos dígitos decimales y el símbolo de moneda
     - **Valida: Requerimiento 1.4**
 
-- [~] 10. Implementar componentes UI atómicos
+- [ ] 10. Implementar componentes UI atómicos
   - Crear `frontend/src/components/ui/Button/Button.jsx` y `Button.module.css` con variantes (primary, secondary, ghost), estados (loading, disabled) y transiciones de 150–300ms
   - Crear `frontend/src/components/ui/Spinner/Spinner.jsx` y `Spinner.module.css` para indicador de carga
   - Crear `frontend/src/components/ui/Badge/Badge.jsx` y `Badge.module.css` para mostrar contadores (ej. ítems en carrito)
