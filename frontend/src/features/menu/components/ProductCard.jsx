@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { formatCurrency } from '../../../utils/formatCurrency'
 import styles from './ProductCard.module.css'
@@ -8,8 +9,11 @@ const PLACEHOLDER = '/placeholder-food.webp'
  * Card displaying a single menu product with add-to-cart action.
  */
 export default function ProductCard({ product, onAddToCart, onViewDetail }) {
+  const [imgLoaded, setImgLoaded] = useState(false)
+
   function handleImageError(e) {
     e.currentTarget.src = PLACEHOLDER
+    setImgLoaded(true)
   }
 
   function handleAddClick(e) {
@@ -30,7 +34,8 @@ export default function ProductCard({ product, onAddToCart, onViewDetail }) {
         <img
           src={product.image_url || PLACEHOLDER}
           alt={product.name}
-          className={styles.image}
+          className={[styles.image, imgLoaded ? styles.imageLoaded : ''].join(' ')}
+          onLoad={() => setImgLoaded(true)}
           onError={handleImageError}
           loading="lazy"
         />
