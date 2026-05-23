@@ -168,7 +168,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que el resultado contiene únicamente productos con `category_id` igual a la categoría seleccionada
     - **Valida: Requerimiento 1.2**
 
-- [ ] 14. Implementar feature de carrito de compras
+- [x] 14. Implementar feature de carrito de compras
   - Crear `frontend/src/features/cart/context/CartContext.jsx` con `CartProvider` usando `useReducer` para gestionar el estado del carrito; el reducer debe manejar acciones: `ADD_ITEM` (agrega con cantidad 1 o incrementa), `REMOVE_ITEM`, `UPDATE_QUANTITY` (si qty=0, elimina el ítem), `CLEAR_CART`
   - Calcular `totalItems` (suma de cantidades) y `subtotal` (suma de `price × quantity`) como valores derivados del estado
   - Crear `frontend/src/features/cart/hooks/useCart.js` que consume `CartContext`
@@ -195,12 +195,12 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que `totalItems === sum(quantities)` y `subtotal === sum(price × quantity)`
     - **Valida: Requerimientos 2.4, 2.5**
 
-- [~] 15. Checkpoint — Features de menú y carrito
+- [x] 15. Checkpoint — Features de menú y carrito
   - Verificar que el menú carga y filtra productos correctamente
   - Verificar que el carrito agrega, modifica y elimina productos con totales correctos
   - Asegurarse de que todos los tests del frontend pasan. Consultar al usuario si hay dudas.
 
-- [~] 16. Implementar feature de pedidos
+- [x] 16. Implementar feature de pedidos
   - Crear `frontend/src/features/orders/services/orderService.js` con función `createOrder(items)` que hace `POST /api/v1/orders`
   - Crear `frontend/src/features/orders/hooks/useOrder.js` usando `useAsync` para gestionar el estado de creación del pedido
   - Crear `frontend/src/features/orders/components/CheckoutPage.jsx` y CSS Module que muestra el resumen del carrito, botón "Confirmar Pedido" (deshabilitado si carrito vacío con mensaje de error inline), y `Spinner` durante la operación asíncrona
