@@ -80,19 +80,19 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
   - Todos los endpoints deben retornar la estructura `{data, error, status}` definida en el diseño
   - _Requerimientos: 7.1, 7.2, 7.3, 7.4_
 
-- [~] 6. Checkpoint — Backend completo
+- [x] 6. Checkpoint — Backend completo
   - Verificar que `docker-compose up db backend` levanta sin errores
   - Verificar que las migraciones se aplican correctamente
   - Verificar que los endpoints responden en `http://localhost:8000/api/v1/`
   - Asegurarse de que todos los tests del backend pasan. Consultar al usuario si hay dudas.
 
-- [~] 7. Configurar proyecto frontend (React + Vite)
+- [x] 7. Configurar proyecto frontend (React + Vite)
   - Crear `frontend/package.json` con dependencias fijadas: `react@18`, `react-dom@18`, `vite@5`, `axios`, `prop-types`, y devDependencies: `vitest`, `@vitest/coverage-v8`, `fast-check`, `@testing-library/react`, `@testing-library/jest-dom`
   - Crear `frontend/vite.config.js` con configuración de Vitest (globals, jsdom environment) y proxy de desarrollo hacia el backend
   - Crear la estructura de directorios completa del frontend según el diseño: `src/components/ui/`, `src/components/layout/`, `src/components/ParticleBackground/`, `src/features/menu/`, `src/features/cart/`, `src/features/orders/`, `src/hooks/`, `src/services/`, `src/styles/`, `src/utils/`
   - _Requerimientos: 5.1, 5.2, 5.3_
 
-- [~] 8. Implementar tokens de diseño y estilos globales
+- [ ] 8. Implementar tokens de diseño y estilos globales
   - Crear `frontend/src/styles/reset.css` con reset CSS moderno
   - Crear `frontend/src/styles/tokens.css` con todas las CSS custom properties del diseño (colores, tipografía, espaciado, bordes, sombras, transiciones)
   - Crear `frontend/src/styles/globals.css` importando reset y tokens, definiendo estilos base para `body`, `html`, tipografía y scrollbar
