@@ -71,7 +71,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que el backend retorna HTTP 404 con mensaje descriptivo en `error`
     - **Valida: Requerimiento 7.4**
 
-- [ ] 5. Implementar endpoints REST de la API
+- [x] 5. Implementar endpoints REST de la API
   - Crear `backend/app/api/deps.py` con la dependencia `get_db` para inyección de sesión async
   - Crear `backend/app/api/v1/endpoints/categories.py` con `GET /api/v1/categories`
   - Crear `backend/app/api/v1/endpoints/products.py` con `GET /api/v1/products` (con query param `category_id` opcional) y `GET /api/v1/products/{id}`

@@ -7,6 +7,7 @@ from fastapi.responses import JSONResponse
 
 from app.core.config import settings
 from app.core.database import connect_with_retry
+from app.api.v1.router import api_router
 
 
 @asynccontextmanager
@@ -49,3 +50,7 @@ async def http_exception_handler(request: Request, exc: HTTPException):
 @app.get("/")
 async def root():
     return {"data": "Food Business API running", "error": None, "status": 200}
+
+
+# Register API routes
+app.include_router(api_router, prefix="/api/v1")
