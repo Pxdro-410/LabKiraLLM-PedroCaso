@@ -24,7 +24,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
   - Crear `.env.example` con las variables de entorno requeridas (`POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, `FRONTEND_ORIGIN`)
   - _Requerimientos: 6.1, 6.2, 6.3, 6.4_
 
-- [ ] 2. Configurar proyecto backend (FastAPI + SQLAlchemy)
+- [x] 2. Configurar proyecto backend (FastAPI + SQLAlchemy)
   - Crear `backend/requirements.txt` con dependencias fijadas: `fastapi`, `uvicorn[standard]`, `sqlalchemy[asyncio]`, `asyncpg`, `alembic`, `pydantic-settings`, `httpx`, `pytest`, `pytest-asyncio`, `hypothesis`
   - Crear `backend/app/core/config.py` con `Settings` usando `pydantic-settings` para leer variables de entorno
   - Crear `backend/app/core/database.py` con engine async SQLAlchemy y función `connect_with_retry` (máx. 10 intentos, intervalo 5s)
@@ -37,7 +37,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que para intentos 1–9 se reintenta, y en el intento 10 se lanza `RuntimeError`
     - **Valida: Requerimiento 6.5**
 
-- [~] 3. Implementar modelos SQLAlchemy y migraciones
+- [x] 3. Implementar modelos SQLAlchemy y migraciones
   - Crear `backend/app/models/category.py` con el modelo `Category` (id, name, description, created_at, relación con products)
   - Crear `backend/app/models/product.py` con el modelo `Product` (id, category_id FK, name, description, price Numeric(10,2), image_url, is_available, created_at)
   - Crear `backend/app/models/order.py` con los modelos `Order` y `OrderItem` (según el diagrama ER del diseño)
@@ -45,7 +45,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
   - Crear un script de seed `backend/app/seed.py` con datos de ejemplo (categorías y productos) para desarrollo
   - _Requerimientos: 3.1, 3.3, 7.1_
 
-- [~] 4. Implementar schemas Pydantic y operaciones CRUD
+- [x] 4. Implementar schemas Pydantic y operaciones CRUD
   - Crear `backend/app/schemas/category.py` con `CategoryRead`
   - Crear `backend/app/schemas/product.py` con `ProductBase`, `ProductRead`
   - Crear `backend/app/schemas/order.py` con `OrderItemCreate`, `OrderCreate`, `OrderItemRead`, `OrderRead`
@@ -71,7 +71,7 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que el backend retorna HTTP 404 con mensaje descriptivo en `error`
     - **Valida: Requerimiento 7.4**
 
-- [~] 5. Implementar endpoints REST de la API
+- [ ] 5. Implementar endpoints REST de la API
   - Crear `backend/app/api/deps.py` con la dependencia `get_db` para inyección de sesión async
   - Crear `backend/app/api/v1/endpoints/categories.py` con `GET /api/v1/categories`
   - Crear `backend/app/api/v1/endpoints/products.py` con `GET /api/v1/products` (con query param `category_id` opcional) y `GET /api/v1/products/{id}`
