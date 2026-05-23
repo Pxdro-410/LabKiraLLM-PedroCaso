@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   db:
     image: postgres:16-alpine
@@ -11,10 +9,11 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fooduser}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fooduser} -d ${POSTGRES_DB:-foodapp}"]
       interval: 5s
       timeout: 5s
-      retries: 10
+      retries: 15
+      start_period: 10s
 
   backend:
     build: ./backend
@@ -34,7 +33,7 @@ services:
     build: ./frontend
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - backend
 
