@@ -213,14 +213,14 @@ Implementación incremental de la aplicación web de negocio de comida. El plan 
     - Verificar que el pedido creado tiene estado "Pendiente", contiene exactamente los mismos productos/cantidades del carrito, el total es correcto, y el carrito queda vacío
     - **Valida: Requerimientos 3.1, 3.3, 3.5**
 
-- [~] 17. Integrar todos los componentes en App.jsx
+- [x] 17. Integrar todos los componentes en App.jsx
   - Crear `frontend/src/App.jsx` que compone: `ParticleBackground` como capa de fondo, `CartProvider` envolviendo toda la app, `Navbar` con `Badge` de carrito, `MenuPage` como contenido principal, `CartDrawer` controlado por estado de visibilidad, y rutas a `CheckoutPage` y `OrderConfirmation`
   - Crear `frontend/src/main.jsx` que monta `App` en el DOM con `React.StrictMode`
   - Crear `frontend/index.html` con el punto de entrada, meta viewport y referencia a `main.jsx`
   - Agregar imagen `frontend/public/placeholder-food.webp` como fallback para productos sin imagen
   - _Requerimientos: 1.1, 2.4, 4.1, 4.2, 5.1, 5.2_
 
-- [~] 18. Checkpoint final — Integración completa
+- [x] 18. Checkpoint final — Integración completa
   - Verificar que `docker-compose up` levanta todos los servicios sin errores
   - Verificar que la aplicación es accesible en `http://localhost:80`
   - Verificar que el flujo completo funciona: explorar menú → agregar al carrito → confirmar pedido → ver confirmación
